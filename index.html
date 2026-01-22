@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JMF Ferguson LLC | Wellness & Tech</title>
+    <title>DF Heat Labs | JMF Ferguson LLC</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center; }
-        .logo { max-width: 200px; margin-bottom: 20px; }
-        h1 { color: #1677ff; }
-        .projects { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; }
-        .card { border: 1px solid #eee; padding: 20px; border-radius: 10px; width: 200px; margin: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; background: #1677ff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
-        footer { margin-top: 50px; font-size: 0.8em; color: #888; }
+        :root { --primary: #003366; --accent: #c0c0c0; --text: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #f9f9f9; }
+        header { border-bottom: 3px solid var(--primary); padding-bottom: 20px; margin-bottom: 40px; text-align: center; }
+        .branding h1 { margin: 0; color: var(--primary); font-size: 2.5em; letter-spacing: -1px; }
+        .branding p { font-weight: 600; color: #666; text-transform: uppercase; font-size: 0.9em; }
+        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 0; }
+        .links a { display: block; background: #fff; border: 1px solid var(--primary); color: var(--primary); padding: 12px; margin: 10px 0; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+        .links a:hover { background: var(--primary); color: white; }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.85em; color: #777; line-height: 1.8; }
+        .legal-box { background: #eee; padding: 15px; border-radius: 6px; margin-top: 20px; text-align: left; }
+        @media (max-width: 600px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <h1>JMF Ferguson LLC</h1>
-    <p>Premium Wellness Consulting & Tech Development</p>
-    
-    <div class="projects">
-        <div class="card">
-            <h3>T'ai Chi</h3>
-            <p>Holistic Movement Guide</p>
-            <a href="privacy-taichi.html">Privacy Policy</a>
-        </div>
-        <div class="card">
-            <h3>HNR Therapy</h3>
-            <p>IV Therapy Coordination</p>
-            <a href="privacy-hnr.html">Privacy Policy</a>
-        </div>
-        <div class="card">
-            <h3>Sin City</h3>
-            <p>Community Expression</p>
-            <a href="privacy-sincity.html">Privacy Policy</a>
+
+<header>
+    <div class="branding">
+        <h1>DF HEAT LABS</h1>
+        <p>Innovation • Wellness • Entertainment</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Tech & Media</h2>
+        <p>DF Heat Labs is the primary technology and entertainment production arm specializing in cross-platform mobile development, game design, and digital storytelling.</p>
+        <div class="links">
+            <a href="privacy-taichi.html">T'ai Chi Privacy Policy</a>
+            <a href="privacy-sincity.html">Sin City Privacy Policy</a>
         </div>
     </div>
 
-    <a href="mailto:jasonferguson719@gmail.com" class="btn">Contact Support</a>
+    <div class="card">
+        <h2>Clinical Wellness</h2>
+        <p>JMF Ferguson LLC provides expert behavioral health consulting and wellness integration for clinical practitioners and veteran organizations.</p>
+        <div class="links">
+            <a href="privacy-hnr.html">HNR Therapy Privacy Policy</a>
+            <a href="mailto:jasonferguson719@gmail.com">Contact Support</a>
+        </div>
+    </div>
+</div>
 
-    <footer>
-        <p>UEI: [Insert Your UEI] | Philly, PA | Wyoming Tech Lab</p>
-        <p>&copy; 2026 JMF Ferguson LLC. All rights reserved.</p>
-    </footer>
+<footer>
+    <div class="legal-box">
+        <strong>Headquarters & Legal Information:</strong><br>
+        Entity: JMF FERGUSON LIMITED LIABILITY COMPANY<br>
+        Doing Business As: DF HEAT LABS<br>
+        Address: [30 N Gould St Ste N, Sheridan, WY 82801]<br>
+        UEI: NMVUMDLN26J1 | CAGE: 7MKA6 | Status: SDVOSB (In-Process)<br>
+        D-U-N-S (DF Heat Labs): [144936735]
+    </div>
+    <p>&copy; 2026 JMF Ferguson Limited Liability Company. All rights reserved.</p>
+</footer>
+
 </body>
 </html>

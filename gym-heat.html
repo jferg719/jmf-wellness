@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Heat // Official Dossier — DF Heat Labs</title>
+  
+  <meta property="og:title" content="Gym Heat — Official Dossier">
+  <meta property="og:description" content="Discipline is power. The heat ignites. Issue #2 in development from DF Heat Labs.">
+  <meta property="og:image" content="hero.png">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;0,900;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card-bg: #121212;
+      --border: #222222;
+      --text-main: #f0f0f0;
+      --text-muted: #888888;
+      --heat-red: #ff1e27;
+      --heat-glow: rgba(255, 30, 39, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.25rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .studio-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .hero-wrapper {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px -10px var(--heat-glow);
+      margin-bottom: 2rem;
+      background: #000;
+    }
+
+    .hero-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--heat-red);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .dossier {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .dossier-header {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dossier-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.35rem 0;
+      font-size: 0.95rem;
+    }
+
+    .dossier-label {
+      color: var(--text-muted);
+    }
+
+    .dossier-value {
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .logline {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border);
+      font-size: 0.95rem;
+      color: #cccccc;
+    }
+
+    /* Roadmap Section */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .roadmap-item {
+      background: #181818;
+      border: 1px solid var(--border);
+      padding: 0.85rem;
+      border-radius: 6px;
+    }
+
+    .roadmap-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--heat-red);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25rem;
+    }
+
+    .roadmap-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .action-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      width: 100%;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.95rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--heat-red);
+      color: #ffffff;
+      box-shadow: 0 4px 20px var(--heat-glow);
+    }
+
+    .btn-primary:hover {
+      background: #e0151e;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: #555555;
+      background: #181818;
+    }
+
+    .btn-amazon {
+      background: #1f1f1f;
+      color: #ff9900;
+      border: 1px solid #333333;
+    }
+
+    .btn-amazon:hover {
+      border-color: #ff9900;
+      background: #252525;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="studio-badge">DF Heat Labs (DFHL) &bull; Production Studio</div>
+
+    <div class="hero-wrapper">
+      <img src="hero.png" alt="Gym Heat — Teaser One-Sheet">
+    </div>
+
+    <h1>Gym Heat</h1>
+    <div class="tagline">Discipline is Power. The Heat Ignites.</div>
+
+    <!-- Active Project Dossier -->
+    <div class="dossier">
+      <div class="dossier-header">Subject Profile // Classified</div>
+      
+      <div class="dossier-row">
+        <span class="dossier-label">Protagonist</span>
+        <span class="dossier-value">Frank James</span>
+      </div>
+      <div class="dossier-row">
+        <span class="dossier-label">Codename</span>
+        <span class="dossier-value">Gym Heat (GH)</span>
+      </div>
+      <div class="dossier-row">
+        <span class="dossier-label">Current Pipeline</span>
+        <span class="dossier-value">Issue #2 // Motion Comic</span>
+      </div>
+      <div class="dossier-row">
+        <span class="dossier-label">Production Entity</span>
+        <span class="dossier-value">DF Heat Labs, LLC</span>
+      </div>
+
+      <p class="logline">
+        When inner discipline meets kinetic combustion, the boundary between training and survival dissolves. High-contrast martial arts storytelling built for the next generation.
+      </p>
+    </div>
+
+    <!-- Franchise Roadmap -->
+    <div class="dossier">
+      <div class="dossier-header">Transmedia Universe Roadmap</div>
+      <div class="roadmap-grid">
+        <div class="roadmap-item">
+          <div class="roadmap-tag">Phase 1 &bull; Active</div>
+          <div class="roadmap-title">Graphic Novel Issue #2 & Motion Comic</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-tag">Phase 2 &bull; Pre-Prod</div>
+          <div class="roadmap-title">Cinematic Live-Action / 3D Short Film</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-tag">Phase 2 &bull; Development</div>
+          <div class="roadmap-title">Combat Fitness Interactive Video Game</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-tag">Archive &bull; Available</div>
+          <div class="roadmap-title">Issue #1: Hero for Health and Wellness</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calls to Action -->
+    <div class="action-links">
+      <a href="https://www.youtube.com/@DFHeatLabs" target="_blank" class="btn btn-primary">
+        Watch Motion Teaser on YouTube
+      </a>
+      <a href="https://www.instagram.com/DFHeatLabs" target="_blank" class="btn btn-secondary">
+        Follow Production on Instagram
+      </a>
+      <a href="https://www.amazon.com/Adventures-Gym-HEAT-Wellness-Episode-ebook/dp/B00RQ4RFAG" target="_blank" class="btn btn-amazon">
+        Read Issue #1 on Amazon Kindle
+      </a>
+    </div>
+
+    <footer>
+      &copy; 2026 DF Heat Labs, LLC. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>

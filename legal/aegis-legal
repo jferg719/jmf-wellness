@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy - Aegis Senior Fraud Defense</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+        h1, h2 { color: #0F2C59; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p><strong>Effective Date:</strong> September 2026</p>
+    <p><strong>Aegis Senior Fraud Defense</strong> is developed and operated by <strong>DF Heat Labs LLC</strong>. We are committed to protecting the privacy and independence of older adults and their families.</p>
+    
+    <h2>1. Information We Do Not Collect</h2>
+    <p>Aegis operates on a zero-credential security architecture. We do <strong>not</strong> collect, request, transmit, or store:</p>
+    <ul>
+        <li>Social Security numbers or government ID numbers.</li>
+        <li>Bank account numbers, routing numbers, or payment card details.</li>
+        <li>Online banking usernames, passwords, or PINs.</li>
+    </ul>
+
+    <h2>2. On-Device Document Scanning & Analysis</h2>
+    <p>When you use the scanner to evaluate suspicious mail, bills, or checks, image processing and optical character recognition (OCR) are performed on-device. Images and extracted text are not sold, shared with data brokers, or used for commercial advertising.</p>
+
+    <h2>3. Evidence Dossier Export</h2>
+    <p>The Evidence Snapshot PDF is generated locally on your device. You maintain sole custody and control over this report. It is only shared when you deliberately send it to a trusted caregiver, legal proxy, Older Adult Protective Services (OAPS), or law enforcement.</p>
+
+    <h2>4. Helplines & Third Parties</h2>
+    <p>The app provides directory shortcuts to established public helplines (such as the Philadelphia Corporation for Aging and Pennsylvania Department of Aging). Placing a call connects you through your standard cellular carrier under your carrier's terms.</p>
+<h2>6. Disclaimer & Limitation of Liability</h2>
+<p>
+    <strong>Aegis Senior Fraud Defense</strong> is an automated educational screening application operated by <strong>DF Heat Labs LLC</strong>.
+</p>
+<ul>
+    <li><strong>No Legal or Professional Advice:</strong> The assessments, text extractions, and summaries provided do not constitute legal, accounting, tax, or professional investigative advice.</li>
+    <li><strong>No Warranty of Accuracy:</strong> Scam schemes change constantly. A safe or low-risk assessment is not a legal guarantee of legitimacy. Users must verify suspicious solicitations independently.</li>
+    <li><strong>Non-Governmental Entity:</strong> Aegis is an independent utility and is not an agency of any municipal, state, or federal government, nor is it an official Older Adult Protective Services (OAPS) reporting channel.</li>
+</ul>
+    <h2>5. Contact Us</h2>
+    <p>For questions or support regarding this privacy policy, contact: <strong>jason@dfheatlabs.com</strong></p>
+</body>
+</html>

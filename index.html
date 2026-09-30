@@ -3,78 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DF Heat Labs | JMF Ferguson LLC</title>
+    <title>DF Heat Labs | Interactive Studio</title>
     <style>
-        :root { --primary: #003366; --accent: #c0c0c0; --text: #333; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #f9f9f9; }
-        header { border-bottom: 3px solid var(--primary); padding-bottom: 20px; margin-bottom: 40px; text-align: center; }
-        .branding h1 { margin: 0; color: var(--primary); font-size: 2.5em; letter-spacing: -1px; }
-        .branding p { font-weight: 600; color: #666; text-transform: uppercase; font-size: 0.9em; }
-        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 0; }
-        .links a { display: block; background: #fff; border: 1px solid var(--primary); color: var(--primary); padding: 12px; margin: 10px 0; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; }
-        .links a:hover { background: var(--primary); color: white; }
-        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.85em; color: #777; line-height: 1.8; }
-        .legal-box { background: #eee; padding: 15px; border-radius: 6px; margin-top: 20px; text-align: left; }
-        @media (max-width: 600px) { .container { grid-template-columns: 1fr; } }
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: #161a22;
+            --card-border: #30363d;
+            --accent-cyan: #00e5ff;
+            --accent-red: #ff3366;
+            --accent-gold: #ffb703;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 40px 20px; }
+        .container { max-width: 960px; margin: 0 auto; }
+        
+        /* Header */
+        header { text-align: center; margin-bottom: 50px; }
+        header h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-main); margin-bottom: 8px; }
+        header h1 span { color: var(--accent-red); }
+        header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        /* Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .card:hover { transform: translateY(-4px); border-color: var(--accent-cyan); }
+        .tag { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
+        .tag-cyan { background: rgba(0, 229, 255, 0.15); color: var(--accent-cyan); }
+        .tag-red { background: rgba(255, 51, 102, 0.15); color: var(--accent-red); }
+        .tag-gold { background: rgba(255, 183, 3, 0.15); color: var(--accent-gold); }
+        
+        .card h2 { font-size: 1.4rem; margin-bottom: 8px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .btn-group { display: flex; gap: 10px; margin-top: auto; }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+            flex: 1;
+        }
+        .btn-primary { background: var(--text-main); color: var(--bg-color); }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-outline { border: 1px solid var(--card-border); color: var(--text-main); }
+        .btn-outline:hover { border-color: var(--text-muted); }
+
+        /* Footer & Legal Hub */
+        footer { border-top: 1px solid var(--card-border); padding-top: 30px; text-align: center; }
+        footer h3 { font-size: 1rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .legal-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+        .legal-links a { color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem; }
+        .legal-links a:hover { text-decoration: underline; }
+        .copy { font-size: 0.8rem; color: #484f58; }
     </style>
 </head>
 <body>
 
-    <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-top: 1px solid #ddd; margin-top: 40px;">
-    <h2 style="color: #333;">A DF Heat Labs Production</h2>
-    <p style="color: #666; max-width: 600px; margin: 0 auto;">
-        DF Heat Labs LLC is the specialized technology and entertainment arm of JM Ferguson Limited Liability Company, 
-        dedicated to building high-performance wellness applications and immersive digital experiences.
-    </p>
-    <p style="margin-top: 10px;">
-        <strong>Contact:</strong> <a href="mailto:jason@dfheatlabs.com">jason@dfheatlabs.com</a> | 267-951-8273
-    </p>
-</div>
-
-<header>
-    <div class="branding">
-        <h1>DF HEAT LABS</h1>
-        <p>Innovation • Wellness • Entertainment</p>
-    </div>
-</header>
-
 <div class="container">
-    <div class="card">
-        <h2>Tech & Media</h2>
-        <p>DF Heat Labs is the primary technology and entertainment production arm specializing in cross-platform mobile development, game design, and digital storytelling.</p>
-        <div class="links">
-            <a href="privacy-taichi.html">T'ai Chi Privacy Policy</a>
-            <a href="privacy-sincity.html">Sin City Privacy Policy</a>
-            <!-- Add this line below the Sin City button -->
-            <a href="portfolio-privacy.html" ">Digital Portfolio Privacy Policy</a>
-            <!-- Add this line below for Fade Out -->
-            <a href="fadeout-privacy.html" ">Fade Out Privacy Policy</a>
+    <header>
+        <h1>DF Heat <span>Labs</span></h1>
+        <p>Independent Interactive Studio & Digital Publishing</p>
+    </header>
+
+    <div class="grid">
+        <!-- Vanishing Point -->
+        <div class="card">
+            <div>
+                <span class="tag tag-cyan">Construct Hub • Live</span>
+                <h2>Vanishing Point: The Archive</h2>
+                <p>Cyberpunk tactile rhythm puzzle matrix. Features Fade Out and Sonic Arrows calibration modules.</p>
+            </div>
+            <div class="btn-group">
+                <a href="https://onelink.to/gvk2mf" class="btn btn-primary" target="_blank">Play Now</a>
+            </div>
+        </div>
+
+        <!-- I Have A Secret -->
+        <div class="card">
+            <div>
+                <span class="tag tag-red">Social • Live</span>
+                <h2>I Have a Secret</h2>
+                <p>Location-aware, noir-inspired anonymous narrative exchange. Real stories, unfiltered audio.</p>
+            </div>
+            <div class="btn-group">
+                <a href="https://onelink.to/ihas" class="btn btn-primary" target="_blank">Get App</a>
+            </div>
+        </div>
+
+        <!-- Gym Heat -->
+        <div class="card">
+            <div>
+                <span class="tag tag-gold">IP Universe • In Dev</span>
+                <h2>Gym Heat</h2>
+                <p>Transmedia fitness superhero comic franchise and high-intensity interactive experience.</p>
+            </div>
+            <div class="btn-group">
+                <a href="./gym-heat/" class="btn btn-outline">Explore Universe</a>
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <h2>Clinical Wellness</h2>
-        <p>JMF Ferguson LLC provides expert behavioral health consulting and wellness integration for clinical practitioners and veteran organizations.</p>
-        <div class="links">
-            <a href="privacy-hnr.html">HNR Therapy Privacy Policy</a>
-            <a href="mailto:jason@dfheatlabs.com">Contact Support</a>
+    <footer>
+        <h3>Compliance & Legal Directory</h3>
+        <div class="legal-links">
+            <a href="./privacy-sincity.html">I Have a Secret Privacy</a>
+            <a href="./privacy-vanishing-point.html">Vanishing Point Privacy</a>
+            <a href="./legal/privacy-taichi.html">T'ai Chi Platform Privacy</a>
         </div>
-    </div>
+        <p class="copy">© 2026 DF Heat Labs LLC. All rights reserved.</p>
+    </footer>
 </div>
-
-<footer>
-    <div class="legal-box">
-        <strong>Headquarters & Legal Information:</strong><br>
-        Entity: JMF FERGUSON LIMITED LIABILITY COMPANY<br>
-        Doing Business As: DF HEAT LABS<br>
-        Address: [30 N Gould St Ste N, Sheridan, WY 82801]<br>
-        UEI: NMVUMDLN26J1 | CAGE: 7MKA6 | Status: SDVOSB (In-Process)<br>
-        D-U-N-S (DF Heat Labs): [144936735]
-    </div>
-    <p>&copy; 2026 JMF Ferguson Limited Liability Company. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
